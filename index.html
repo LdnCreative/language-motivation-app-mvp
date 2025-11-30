@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language Habit Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Complete one task today</h1>
+      <p class="subtitle">Choose a simple action to keep your language skills active.</p>
+    </header>
+
+    <section class="mode-switch" aria-label="Select task mode">
+      <button class="switch-btn active" data-mode-target="simple-mode">Simple Mode</button>
+      <button class="switch-btn" data-mode-target="structured-mode">Structured Mode</button>
+    </section>
+
+    <section id="simple-mode" class="mode-panel active" aria-label="Simple mode">
+      <div class="tasks" aria-label="Language tasks">
+        <button class="task" data-task="Listen to a podcast">Listen to a podcast</button>
+        <button class="task" data-task="Watch a video">Watch a video</button>
+        <button class="task" data-task="Read something">Read something</button>
+        <button class="task" data-task="Shadow a sentence">Shadow a sentence</button>
+        <button class="task" data-task="Self-talk for 1 minute">Self-talk for 1 minute</button>
+        <button class="task" data-task="Write down 3 vocabulary items">Write down 3 vocabulary items</button>
+      </div>
+    </section>
+
+    <!-- STRUCTURED MODE -->
+    <section id="structured-mode" class="mode-panel" aria-label="Structured mode">
+      <p class="mode-explainer">
+        Same idea — one task a day — but organised in the way real learners think: listen, speak, read, repeat, vocab, translate.
+      </p>
+
+      <!-- LISTEN -->
+      <div class="category">
+        <h2 class="category-title">Listen</h2>
+        <div class="task-grid">
+          <button class="task" data-task="Listen to a 10-minute podcast">Listen to a 10-minute podcast</button>
+          <button class="task" data-task="Watch one short video twice">Watch one short video twice</button>
+          <button class="task" data-task="Re-listen to something familiar">Re-listen to something familiar</button>
+        </div>
+      </div>
+
+      <!-- SPEAK -->
+      <div class="category">
+        <h2 class="category-title">Speak</h2>
+        <div class="task-grid">
+          <button class="task" data-task="Self-talk for 1 minute">Self-talk for 1 minute</button>
+          <button class="task" data-task="Say a few sentences out loud">Say a few sentences out loud</button>
+          <button class="task" data-task="Send one message in your target language">Send one message in your target language</button>
+        </div>
+      </div>
+
+      <!-- READ -->
+      <div class="category">
+        <h2 class="category-title">Read</h2>
+        <div class="task-grid">
+          <button class="task" data-task="Read 1–3 short paragraphs">Read 1–3 short paragraphs</button>
+          <button class="task" data-task="Read a transcript or short post">Read a transcript or short post</button>
+        </div>
+      </div>
+
+      <!-- REPEAT -->
+      <div class="category">
+        <h2 class="category-title">Repeat</h2>
+        <div class="task-grid">
+          <button class="task" data-task="Shadow 2–3 sentences">Shadow 2–3 sentences</button>
+          <button class="task" data-task="Repeat the audio out loud">Repeat the audio out loud</button>
+          <button class="task" data-task="Say a phrase with the original audio">Say a phrase with the original audio</button>
+        </div>
+      </div>
+
+      <!-- VOCAB -->
+      <div class="category">
+        <h2 class="category-title">Vocab</h2>
+        <div class="task-grid">
+          <button class="task" data-task="Write 3 useful phrases">Write 3 useful phrases</button>
+          <button class="task" data-task="Review vocabulary you highlighted earlier">Review vocabulary you highlighted earlier</button>
+        </div>
+      </div>
+
+      <!-- TRANSLATE -->
+      <div class="category">
+        <h2 class="category-title">Translate (optional)</h2>
+        <div class="task-grid">
+          <button class="task" data-task="Translate 1–2 lines">Translate 1–2 lines</button>
+          <button class="task" data-task="Rephrase something in your own words">Rephrase something in your own words</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="complete-btn" class="primary">Mark as Done</button>
+      <p id="confirmation" class="confirmation" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
