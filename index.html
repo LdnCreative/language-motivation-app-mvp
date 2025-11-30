@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language Habit Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Complete one task today</h1>
+      <p class="subtitle">Choose a simple action to keep your language skills active.</p>
+    </header>
+
+    <section class="tasks" aria-label="Language tasks">
+      <button class="task" data-task="podcast">Listen to a podcast</button>
+      <button class="task" data-task="video">Watch a video</button>
+      <button class="task" data-task="read">Read something</button>
+      <button class="task" data-task="shadow">Shadow a sentence</button>
+      <button class="task" data-task="self-talk">Self-talk for 1 minute</button>
+      <button class="task" data-task="vocab">Write down 3 vocabulary items</button>
+    </section>
+
+    <section class="actions">
+      <button id="complete-btn" class="primary">Mark as Done</button>
+      <p id="confirmation" class="confirmation" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
